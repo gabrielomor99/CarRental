@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-        
-    <fieldset>
-        <legend>Select the policy type</legend>
-        
-        <label for="pickupDate">Pickup date</label>
-        <input type="text" name="pickupDate" id="pickupDate" value="" />
-        
-        <label for="numberOfDays"> Number of Days</label>
-        <input type="text" name="numberOfDaysE" id="numberOfDays" value="" />
-            
-        <label for="tollTag">Electronic Toll Tag</label>    
-        <input type="checkbox" name="tollTag" id="tollTag" value="" />
 
-        <label for="gps">GPS ($2.95/day)</label>    
-        <input type="radio" name="gps" id="gps" value="" />
-            <input type="checkbox" name="ACME" id="" value="scooter" />
-            <input type="radio" name="ACME" id="bike" value="bike" />
+<body>
+
+    <fieldset>
+        <p>ACME Car Rental</p>
+
+        <label for="pickupDate">Pickup date: </label>
+        <input type="date" name="pickupDate" id="pickupDate" value="" /> <br />
+
+        <br /> <label for="numberOfDays"> Number of Days: </label>
+        <input type="number" name="numberOfDays" id="numberOfDays" value="" />
+
+        <p>Options</p>
+
+        <input type="checkbox" name="tollTag" id="tollTag" value="395" />
+        <label for="tollTag">Electronic Toll Tag($3.95/day)</label> <br />
+
+        <input type="checkbox" name="gps" id="gps" value="295" />
+        <label for="gps">GPS ($2.95/day)</label> <br />
+        
+        <input type="checkbox" name="roadside" id="roadside" value="295" />
+        <label for="roadSide">Roadside Assistance($2.95/day)</label> <br /> <br />
+
+         Under 25 <br/> <br/>
+
+        <input type="radio" name="surcharge" id="no" value="" />
+        <label for="no">No</label> 
+
+        
+        <input type="radio" name="surcharge" id="yes" value="" />
+        <label for="yes">Yes</label> <br/> <br/>
+
+        
+        <input type="button" name="estTotalCostBtn" id="estTotalCostBtn" value="Estimate Total Cost" /> <br/> <br/>
+
+        <div>Car Rental: $<span id="dailyCarRentalCost">0</span>/day</div>
+        <div> Options: $<span id="estOptionsCost">0</span></div>
+        <div> Under 25 surcharge: $<span id="surchargeCost">0</span></div>
+
+        <div>Total due: $<span id="estTotalCost">0</span>/day</div>
+         
+
+
 
     </fieldset>
+
+    <script src="index.js"></script>
 </body>
-</html>
-</body>
+
 </html>
